@@ -14,7 +14,7 @@ try:
     pattern = re.compile('<div.*?author">.*?<a.*?<img.*?>(.*?)</a>.*?<div.*?'+
                          'content">(.*?)<!--(.*?)-->.*?</div>(.*?)<div class="stats.*?class="number">(.*?)</i>',re.S)
     items = re.findall(pattern,content)
-    print items
+    print(len(items))
     for item in items:
         haveImg = re.search("img",item[3])
         if not haveImg:
